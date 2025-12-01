@@ -126,7 +126,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 ## Support
 
-For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/yourusername/woo-notifications).
+For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/tdrayson/woo-notifications).
 
 ## Changelog
 

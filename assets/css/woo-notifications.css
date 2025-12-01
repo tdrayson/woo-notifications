@@ -1,0 +1,152 @@
+/**
+ * WooCommerce Order Notifications Styles
+ * Uses CSS variables for easy customization
+ */
+
+:root {
+    /* Default CSS variables - can be overridden via PHP config */
+    --woo-notif-bg-color: #ffffff;
+    --woo-notif-text-color: #333333;
+    --woo-notif-border-radius: 8px;
+    --woo-notif-padding: 16px 20px;
+    --woo-notif-font-size: 16px;
+    --woo-notif-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --woo-notif-animation-duration: 0.3s;
+    --woo-notif-link-color: #0073aa;
+    --woo-notif-z-index: 9999;
+    --woo-notif-max-width: 350px;
+    --woo-notif-margin: 20px;
+    --woo-notif-image-size: 60px;
+    --woo-notif-image-border-radius: 6px;
+}
+
+.woo-notification {
+    position: fixed;
+    z-index: var(--woo-notif-z-index);
+    max-width: var(--woo-notif-max-width);
+    background-color: var(--woo-notif-bg-color);
+    color: var(--woo-notif-text-color);
+    padding: var(--woo-notif-padding);
+    border-radius: var(--woo-notif-border-radius);
+    box-shadow: var(--woo-notif-box-shadow);
+    font-size: var(--woo-notif-font-size);
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--woo-notif-animation-duration) ease-out,
+        transform var(--woo-notif-animation-duration) ease-out;
+    pointer-events: none;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.woo-notification.woo-notif-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.woo-notification.woo-notif-hiding {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Position classes */
+.woo-notif-bottom-right {
+    bottom: var(--woo-notif-margin);
+    right: var(--woo-notif-margin);
+}
+
+.woo-notif-bottom-left {
+    bottom: var(--woo-notif-margin);
+    left: var(--woo-notif-margin);
+}
+
+.woo-notif-top-right {
+    top: var(--woo-notif-margin);
+    right: var(--woo-notif-margin);
+}
+
+.woo-notif-top-left {
+    top: var(--woo-notif-margin);
+    left: var(--woo-notif-margin);
+}
+
+/* Notification content wrapper */
+.woo-notif-content {
+    flex: 1;
+    min-width: 0;
+    font-size: var(--woo-notif-font-size);
+}
+
+/* Product image styling */
+.woo-notif-image-wrapper {
+    flex-shrink: 0;
+}
+
+.woo-notif-image-link {
+    display: block;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.woo-notif-product-image {
+    width: var(--woo-notif-image-size);
+    height: var(--woo-notif-image-size);
+    object-fit: cover;
+    border-radius: var(--woo-notif-image-border-radius);
+    display: block;
+}
+
+/* Screen reader only text */
+.woo-notif-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Product link styling */
+.woo-notif-product-link {
+    color: var(--woo-notif-link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.woo-notif-product-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .woo-notification {
+        max-width: calc(100% - calc(var(--woo-notif-margin) * 2));
+        font-size: 15px;
+        padding: 14px 18px;
+    }
+
+    .woo-notif-bottom-right,
+    .woo-notif-bottom-left {
+        bottom: 10px;
+    }
+
+    .woo-notif-top-right,
+    .woo-notif-top-left {
+        top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .woo-notification {
+        font-size: 14px;
+        padding: 12px 16px;
+        max-width: calc(100% - calc(var(--woo-notif-margin) * 2));
+    }
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "name": "John",
+    "product": {
+      "title": "Premium Wireless Headphones",
+      "url": "/product/premium-wireless-headphones/",
+      "image_url": "https://lipsum.app/random/150x150?text=Headphones"
+    },
+    "additional_items": 2
+  },
+  {
+    "name": "Sarah",
+    "product": {
+      "title": "Smart Watch Pro",
+      "url": "/product/smart-watch-pro/",
+      "image_url": "https://lipsum.app/random/150x150?text=Watch"
+    },
+    "additional_items": 0
+  },
+  {
+    "name": "Michael",
+    "product": {
+      "title": "Laptop Stand Adjustable",
+      "url": "/product/laptop-stand-adjustable/",
+      "image_url": "https://lipsum.app/random/150x150?text=Stand"
+    },
+    "additional_items": 1
+  },
+  {
+    "name": "Emily",
+    "product": {
+      "title": "USB-C Charging Cable",
+      "url": "/product/usb-c-charging-cable/",
+      "image_url": "https://lipsum.app/random/150x150?text=Cable"
+    },
+    "additional_items": 3
+  },
+  {
+    "name": "David",
+    "product": {
+      "title": "Mechanical Keyboard RGB",
+      "url": "/product/mechanical-keyboard-rgb/",
+      "image_url": "https://lipsum.app/random/150x150?text=Keyboard"
+    },
+    "additional_items": 0
+  },
+  {
+    "name": "Jessica",
+    "product": {
+      "title": "Wireless Mouse Ergonomic",
+      "url": "/product/wireless-mouse-ergonomic/",
+      "image_url": "https://lipsum.app/random/150x150?text=Mouse"
+    }
+  },
+  {
+    "name": "Robert",
+    "product": {
+      "title": "Monitor Stand Dual",
+      "url": "/product/monitor-stand-dual/",
+      "image_url": "https://lipsum.app/random/150x150?text=Monitor"
+    }
+  },
+  {
+    "name": "Amanda",
+    "product": {
+      "title": "Desk Organizer Set",
+      "url": "/product/desk-organizer-set/",
+      "image_url": "https://lipsum.app/random/150x150?text=Organizer"
+    }
+  },
+  {
+    "name": "James",
+    "product": {
+      "title": "Noise Cancelling Earbuds",
+      "url": "/product/noise-cancelling-earbuds/",
+      "image_url": "https://lipsum.app/random/150x150?text=Earbuds"
+    }
+  },
+  {
+    "name": "Lisa",
+    "product": {
+      "title": "Webcam HD 1080p",
+      "url": "/product/webcam-hd-1080p/",
+      "image_url": "https://lipsum.app/random/150x150?text=Webcam"
+    }
+  },
+  {
+    "name": "Christopher",
+    "product": {
+      "title": "Standing Desk Converter",
+      "url": "/product/standing-desk-converter/",
+      "image_url": "https://lipsum.app/random/150x150?text=Desk"
+    }
+  },
+  {
+    "name": "Michelle",
+    "product": {
+      "title": "LED Desk Lamp",
+      "url": "/product/led-desk-lamp/",
+      "image_url": "https://lipsum.app/random/150x150?text=Lamp"
+    }
+  },
+  {
+    "name": "Daniel",
+    "product": {
+      "title": "Laptop Sleeve Protective",
+      "url": "/product/laptop-sleeve-protective/",
+      "image_url": "https://lipsum.app/random/150x150?text=Sleeve"
+    }
+  },
+  {
+    "name": "Ashley",
+    "product": {
+      "title": "Phone Stand Adjustable",
+      "url": "/product/phone-stand-adjustable/",
+      "image_url": "https://lipsum.app/random/150x150?text=Phone"
+    }
+  },
+  {
+    "name": "Matthew",
+    "product": {
+      "title": "Cable Management Box",
+      "url": "/product/cable-management-box/",
+      "image_url": "https://lipsum.app/random/150x150?text=Box"
+    }
+  }
+]

@@ -52,6 +52,7 @@ All settings are configured in the `getConfig()` method within the main plugin c
 ### CSS Variables
 
 Customize appearance via CSS variables in the `css_variables` array:
+
 - Background color, text color, border radius
 - Padding, font size, box shadow
 - Image size and styling
@@ -60,6 +61,7 @@ Customize appearance via CSS variables in the `css_variables` array:
 ### Dev Mode
 
 Enable dev mode to test with fake orders:
+
 1. Add to `wp-config.php`: `define('WOO_NOTIFICATIONS_DEV_MODE', true);`
 2. Or set `'dev_mode' => true` in the config array
 3. Edit `test-orders.json` to customize test data
@@ -131,6 +133,7 @@ For issues, questions, or contributions, please visit the [GitHub repository](ht
 ## Changelog
 
 ### 1.0.0
+
 - Initial release
 - Real order notifications
 - Configurable settings
@@ -139,4 +142,3 @@ For issues, questions, or contributions, please visit the [GitHub repository](ht
 - Action word variations
 - Accessibility features
 - Dev mode for testing
-

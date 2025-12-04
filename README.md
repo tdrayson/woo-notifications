@@ -26,7 +26,7 @@ WooCommerce Order Notifications displays attractive, animated notifications show
 
 ## Configuration
 
-All settings are configured in the `getConfig()` method within the main plugin class. Open `woo-notifications.php` and locate the `getConfig()` method to customize:
+All settings are configured in the `config.php` file. Open `config.php` to customize:
 
 ### Basic Settings
 
@@ -51,12 +51,29 @@ All settings are configured in the `getConfig()` method within the main plugin c
 
 ### CSS Variables
 
-Customize appearance via CSS variables in the `css_variables` array:
+Customize appearance via CSS variables in the `css_variables` array in `config.php`. All variables are prefixed with `--woo-notif-`:
 
-- Background color, text color, border radius
-- Padding, font size, box shadow
-- Image size and styling
-- Animation duration
+| Variable                         | Default Value                    | Description                                           |
+| -------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| `--woo-notif-bg-color`           | `#ffffff`                        | Background color of the notification                  |
+| `--woo-notif-text-color`         | `#333333`                        | Text color for notification content                   |
+| `--woo-notif-border-radius`      | `8px`                            | Border radius for rounded corners                     |
+| `--woo-notif-padding`            | `16px 20px`                      | Padding inside the notification (vertical horizontal) |
+| `--woo-notif-font-size`          | `16px`                           | Font size for notification text                       |
+| `--woo-notif-box-shadow`         | `0 4px 12px rgba(0, 0, 0, 0.15)` | Box shadow for depth effect                           |
+| `--woo-notif-animation-duration` | `0.3s`                           | Duration of show/hide animations                      |
+| `--woo-notif-link-color`         | `#266431`                        | Color for product links within notifications          |
+
+**Example customization:**
+
+```php
+'css_variables' => array(
+    '--woo-notif-bg-color' => '#f0f0f0',
+    '--woo-notif-text-color' => '#000000',
+    '--woo-notif-border-radius' => '12px',
+    // ... other variables
+),
+```
 
 ### Dev Mode
 
@@ -82,6 +99,7 @@ Enable dev mode to test with fake orders:
 ```
 woo-notifications/
 ├── woo-notifications.php    # Main plugin file
+├── config.php               # Plugin configuration
 ├── assets/
 │   ├── css/
 │   │   └── woo-notifications.css

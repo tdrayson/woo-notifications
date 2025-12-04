@@ -53,16 +53,21 @@ All settings are configured in the `config.php` file. Open `config.php` to custo
 
 Customize appearance via CSS variables in the `css_variables` array in `config.php`. All variables are prefixed with `--woo-notif-`:
 
-| Variable                         | Default Value                    | Description                                           |
-| -------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| `--woo-notif-bg-color`           | `#ffffff`                        | Background color of the notification                  |
-| `--woo-notif-text-color`         | `#333333`                        | Text color for notification content                   |
-| `--woo-notif-border-radius`      | `8px`                            | Border radius for rounded corners                     |
-| `--woo-notif-padding`            | `16px 20px`                      | Padding inside the notification (vertical horizontal) |
-| `--woo-notif-font-size`          | `16px`                           | Font size for notification text                       |
-| `--woo-notif-box-shadow`         | `0 4px 12px rgba(0, 0, 0, 0.15)` | Box shadow for depth effect                           |
-| `--woo-notif-animation-duration` | `0.3s`                           | Duration of show/hide animations                      |
-| `--woo-notif-link-color`         | `#266431`                        | Color for product links within notifications          |
+| Variable                          | Default Value                    | Description                                           |
+| --------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| `--woo-notif-bg-color`            | `#ffffff`                        | Background color of the notification                  |
+| `--woo-notif-text-color`          | `#333333`                        | Text color for notification content                   |
+| `--woo-notif-border-radius`       | `8px`                            | Border radius for rounded corners                     |
+| `--woo-notif-padding`             | `16px 20px`                      | Padding inside the notification (vertical horizontal) |
+| `--woo-notif-font-size`           | `16px`                           | Font size for notification text                       |
+| `--woo-notif-box-shadow`          | `0 4px 12px rgba(0, 0, 0, 0.15)` | Box shadow for depth effect                           |
+| `--woo-notif-animation-duration`  | `0.3s`                           | Duration of show/hide animations                      |
+| `--woo-notif-link-color`          | `#0073aa`                        | Color for product links within notifications          |
+| `--woo-notif-z-index`             | `9999`                           | Z-index for notification positioning                  |
+| `--woo-notif-max-width`           | `350px`                          | Maximum width of the notification                     |
+| `--woo-notif-margin`              | `20px`                           | Margin from screen edges (for positioning)            |
+| `--woo-notif-image-size`          | `60px`                           | Size of product image (width and height)              |
+| `--woo-notif-image-border-radius` | `6px`                            | Border radius for product images                      |
 
 **Example customization:**
 
@@ -71,6 +76,8 @@ Customize appearance via CSS variables in the `css_variables` array in `config.p
     '--woo-notif-bg-color' => '#f0f0f0',
     '--woo-notif-text-color' => '#000000',
     '--woo-notif-border-radius' => '12px',
+    '--woo-notif-max-width' => '400px',
+    '--woo-notif-image-size' => '80px',
     // ... other variables
 ),
 ```

@@ -4,7 +4,7 @@
  * Plugin Name: WooCommerce Order Notifications
  * Plugin URI: https://thecreativetinker.com
  * Description: Displays random order notifications in the bottom corner of the screen using real WooCommerce orders.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Taylor Drayson
  * Author URI: https://thecreativetinker.com
  * Text Domain: woo-notifications
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('WOO_NOTIFICATIONS_VERSION', '1.0.0');
+define('WOO_NOTIFICATIONS_VERSION', '1.0.1');
 define('WOO_NOTIFICATIONS_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WOO_NOTIFICATIONS_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WOO_NOTIFICATIONS_PLUGIN_BASE', plugin_basename(__FILE__));
@@ -137,10 +137,11 @@ class WooNotifications
             return array();
         }
 
-        // Fetch latest orders with status 'wc-processing' or 'wc-completed'
+        // Fetch latest orders with status 'wc-processing' or 'wc-completed' (exclude refunds)
         $args = array(
             'limit' => $config['order_limit'],
-            'status' => array('wc-processing', 'wc-completed'), // Only processing or completed orders
+            'type' => 'shop_order',
+            'status' => array('wc-processing', 'wc-completed'),
             'orderby' => 'date',
             'order' => 'DESC',
         );
@@ -149,6 +150,11 @@ class WooNotifications
         $formatted_orders = array();
 
         foreach ($orders as $order) {
+            // Fallback: skip if billing method missing (e.g. unexpected order type)
+            if (!method_exists($order, 'get_billing_first_name')) {
+                continue;
+            }
+
             // Get customer first name
             $first_name = $order->get_billing_first_name();
 
